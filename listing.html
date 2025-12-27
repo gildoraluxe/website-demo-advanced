@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Property Listings | Atlas Prime Realty Group</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+
+<header class="container">
+  <h1>Atlas Prime Realty Group</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="listings.html">Listings</a>
+    <a href="booking.html">Book</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="container">
+  <h2>Property Listings</h2>
+
+  <label>Filter by type:</label>
+  <select id="filter">
+    <option value="all">All</option>
+    <option value="penthouse">Penthouse</option>
+    <option value="villa">Villa</option>
+  </select>
+
+  <div class="cards" id="listings">
+    <div class="card" data-type="penthouse">
+      <img src="https://source.unsplash.com/400x300/?house" alt="Mayfair Penthouse">
+      <h4>Mayfair Penthouse</h4>
+      <p>£4,250,000</p>
+      <a href="properties/property-1.html" class="btn">View Details</a>
+    </div>
+    <div class="card" data-type="villa">
+      <img src="https://source.unsplash.com/400x300/?villa" alt="Chelsea Villa">
+      <h4>Chelsea Villa</h4>
+      <p>£3,800,000</p>
+      <a href="properties/property-2.html" class="btn">View Details</a>
+    </div>
+  </div>
+</section>
+
+<script src="assets/js/listings.js"></script>
+</body>
+</html>
