@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard | Atlas Prime Realty Group</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="container">
+  <h1>Admin Dashboard</h1>
+</header>
+
+<section class="container">
+  <h2>Bookings</h2>
+  <ul id="bookingList"></ul>
+
+  <h2>Leads</h2>
+  <ul id="leadsList"></ul>
+</section>
+
+<script>
+const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+const bookingList = document.getElementById("bookingList");
+bookings.forEach(b => {
+  const li = document.createElement("li");
+  li.textContent = `${b.name} | ${b.service} | ${b.date} ${b.time}`;
+  bookingList.appendChild(li);
+});
+
+const leads = JSON.parse(localStorage.getItem("leads")) || [];
+const leadsList = document.getElementById("leadsList");
+leads.forEach(l => {
+  const li = document.createElement("li");
+  li.textContent = `${l.name} | ${l.email} | ${l.message}`;
+  leadsList.appendChild(li);
+});
+</script>
+</body>
+</html>
